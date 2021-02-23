@@ -1,0 +1,11 @@
+/*==========================================
+    ICONS
+==========================================*/
+
+.icon {
+    @apply inline-flex self-center pr-1;
+  
+    svg {
+      @apply relative top-icon w-4 h-4;
+    }
+}

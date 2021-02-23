@@ -1,0 +1,43 @@
+#header-container {
+    background-color: transparent;
+    @apply flex justify-between items-center fixed top-0 w-full z-500 px-5 py-3;
+  
+    &.scrolled {
+        @apply bg-white shadow;
+    }
+}
+  
+#header-brand {
+    @apply flex-grow-0 pr-4;
+}
+  
+#header-search {
+    @apply flex-grow invisible;
+    
+    .scrolled & {
+        @apply visible;
+    }
+    
+    input[type="search"] {
+        &:focus {
+            @apply shadow-none;
+        }
+    }
+}
+
+#header-menu {
+    @apply flex-grow-0 pl-4;
+}
+
+#logo {
+    @apply inline-block text-lg font-bold tracking-normal align-middle my-0 mr-4;
+    a {
+        @apply text-primary-500;
+        &:hover {
+            @apply text-primary-500;
+        }
+    }
+    .accent {
+        @apply text-secondary-700;
+    }
+}

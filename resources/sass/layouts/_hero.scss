@@ -1,0 +1,36 @@
+#hero {
+    background-color: #dfdedc;
+    background-image: url('/images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @apply flex w-full h-screen-70 min-h-hero items-center justify-center;
+}
+  
+#hero-search {
+    @apply text-center;
+  
+    h2 {
+      @apply text-5xl font-black;
+    }
+  
+    p {
+      @apply text-xl text-gray-900 mb-8;
+    }
+}
+  
+#hero-search-box {
+    @apply flex w-full bg-white rounded shadow;
+  
+    input[type="search"] {
+        @apply flex-grow leading-normal text-sm font-bold py-2 px-4 rounded;
+    
+        &:focus {
+            @apply outline-none shadow-none;
+        }
+    }
+  
+    button[type="submit"] {
+        @apply flex-grow-0 px-8 rounded-l-none;
+    }
+}

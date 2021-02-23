@@ -1,0 +1,11 @@
+.not-found_wrapper {
+    @apply h-screen-70 pt-header flex flex-wrap;
+}
+
+.not-found-img {
+    background-color: transparent;
+    background-image: url('/images/not-found-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}

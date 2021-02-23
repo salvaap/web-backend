@@ -1,0 +1,26 @@
+.dropdown-toggle {
+    > button:focus {
+        outline: 0;
+    }
+}
+
+.dropdown-menu {
+    ul {
+        @apply list-none pl-0;
+        li {
+            @apply m-0;
+        }
+    }
+    hr {
+        @apply pb-2 mt-2;
+    }
+}
+
+.dropdown-menu-link {
+    @apply block no-underline font-semibold text-sm py-2 px-4 text-primary-500;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        @apply text-primary-800;
+    }
+}

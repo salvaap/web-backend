@@ -1,0 +1,38 @@
+.spinner {
+    animation: spin .6s linear infinite;
+}
+
+.loader {
+    display: block;
+    border: 5px solid transparent;
+    border-top: 5px solid $color-primary;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin .45s linear infinite;
+}
+
+.loader-sm {
+    display: block;
+    border: 3px solid transparent;
+    border-top: 3px solid $color-primary;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin .45s linear infinite;
+}
+
+.loader-xs {
+    display: block;
+    border: 1px solid transparent;
+    border-top: 1px solid $color-primary;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    animation: spin .4s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
