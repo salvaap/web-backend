@@ -1,0 +1,28 @@
+.checkbox-container:hover input ~ .checkmark {
+    @apply bg-gray-300;
+}
+  
+.checkbox-container input:checked ~ .checkmark {
+    @apply bg-accent-500;
+}
+  
+.checkmark::after {
+    content: '';
+    @apply absolute hidden;
+}
+  
+.checkbox-container input:checked ~ .checkmark:after {
+    @apply block;
+}
+  
+.checkbox-container .checkmark::after {
+    left: 9px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

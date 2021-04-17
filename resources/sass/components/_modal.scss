@@ -1,0 +1,110 @@
+.__modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+
+    &__backdrop {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__dialog {
+        background-color: #fff;
+        position: relative;
+        width: 600px;
+        margin: 50px auto;
+        flex-direction: column;
+        border-radius: 5px;
+        z-index: 2;
+
+        @media screen and (max-width: 992px) {
+            width: 90%;
+        }
+    }
+    &__close {
+        width: 15px;
+        height: 15px;
+    }
+    &__header {
+        padding: 20px 20px 10px 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__body {
+        padding: 10px 20px 10px 20px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    &__footer {
+        padding: 10px 20px 20px 20px;
+    }
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .4);
+    z-index: 1000000;
+    @apply fixed invisible top-0 right-0 bottom-0 left-0 flex items-center justify-center;
+
+    &.open {
+        @apply visible;
+    }
+
+    .cancel {
+        @apply absolute w-full h-full;
+    }
+}
+
+.modal {
+    width: 600px;
+    max-width: 80%;
+    box-shadow: 0 5px 11px rgba(36, 37, 8, 0.08);
+    @apply relative bg-white py-4 px-10 rounded;
+
+    &.modal-product {
+        width: 95%;
+        max-width: 1280px;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+        @apply absolute no-underline text-gray-700;
+
+        &:hover {
+            @apply text-gray-900;
+        }
+
+        &:focus {
+            @apply shadow-none;
+        }
+    }
+
+    .modal-content {
+        input[type="email"], input[type="password"] {
+            @apply mt-1 px-3 py-2 block w-full shadow border border-gray-400 rounded-md text-gray-900;
+
+            &:focus {
+                @apply border-primary-500;
+            }
+        }
+    }
+}

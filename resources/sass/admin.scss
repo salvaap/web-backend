@@ -1,0 +1,51 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import '~vuetify/dist/vuetify.min.css';
+@import '~@mdi/font/css/materialdesignicons.css';
+
+@import "global/global";
+@import "admin/layouts/sidebar.scss";
+@import "components/icons";
+
+.v-application--wrap {
+    @apply w-full h-full flex flex-row overflow-hidden antialiased text-gray-800 bg-white;
+}
+
+.theme--light.v-application, .v-application--wrap {
+    background-color: #f9f9f9;
+}
+
+.theme--light.v-application {
+    a:not(.v-btn) {
+        @apply text-accent-500;
+
+        &:hover {
+            @apply text-accent-700;
+        }
+
+        &.plain {
+            color: inherit !important;
+
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+.editor {
+    .ql-container {
+        background-color: #F0F0F0;
+        .ql-editor.ql-blank::before {
+            font-style: normal !important;
+        }
+    }
+}
+
+textarea {
+    resize: none;
+}

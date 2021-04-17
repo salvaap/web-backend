@@ -1,0 +1,43 @@
+/*========================================
+  Cart Styles
+========================================*/
+
+#cart-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -37px;
+    width: 120px;
+    z-index: 9999;
+}
+
+#cart-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 420px;
+    z-index: 10000;
+    transform: translateX(420px);
+    transition: all 0.3s ease-in;
+    @apply bg-white shadow-lg;
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+#checkout-container{
+    position: absolute;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    z-index: 999;
+    @apply cursor-pointer;
+}
+
+.cart-loader {
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1000;
+    @apply absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center;
+}

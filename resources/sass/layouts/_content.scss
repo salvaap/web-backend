@@ -1,0 +1,124 @@
+#main-container {
+    background-color: #FAFAFA;
+}
+
+#catalog-container {
+    @apply flex;
+  
+    aside {
+        @apply w-1/5 bg-white;
+    }
+  
+    section {
+        @apply w-4/5 px-6 py-4;
+    }
+}
+
+#products-grid {
+    @apply grid w-full;
+    &.grid-3 {
+        @apply grid-cols-3;
+    }
+    .col {
+        @apply px-2;
+    }
+}
+
+#load-more-container {
+    @apply flex justify-center px-2 py-4;
+  }
+  
+  .load-more {
+      @apply bg-white text-sm text-primary-500 font-semibold py-1 px-3 border border-primary-500 rounded shadow;
+      
+      &:hover {
+          @apply bg-primary-500 text-white;
+        }
+}
+
+#filter-search {
+    @apply flex-grow;
+  
+    input[type="search"] {
+      &:focus {
+        @apply shadow-none;
+      }
+    }
+  }
+  
+  #categories-navigation {
+    list-style: none;
+    @apply py-2;
+  
+    &.fixed {
+      position: fixed;
+      top: 51px;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+      @apply w-1/5 bg-white;
+    }
+    li {
+      @apply block relative px-4 py-2 border-b border-gray-200 text-gray-600;
+  
+      &:last-of-type {
+        @apply border-b-0;
+      }
+  
+      a {
+        @apply block w-full text-primary-500;
+        &::after {
+          content: '>';
+          position: absolute;
+          top: 50%;
+          right: 0.75rem;
+          margin-top: -0.75rem;
+          @apply text-gray-400;
+        }
+  
+        &:hover {
+          &::after {
+            @apply text-primary-900;
+          }
+        }
+  
+        &.active {
+          @apply text-secondary-500;
+          &::after {
+            @apply text-secondary-500;
+          }
+        }
+  
+        &:focus {
+          outline: none !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+  
+@media screen and (min-width: 640px) {
+    //
+}
+
+@media screen and (min-width: 768px) {
+    #products-grid {
+        @apply grid-cols-2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #products-grid {
+        @apply grid-cols-3;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+//
+}
+
+@media screen and (min-width: 1536px) {
+    #products-grid {
+        @apply grid-cols-5;
+    }
+}

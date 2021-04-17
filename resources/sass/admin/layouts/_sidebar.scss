@@ -1,0 +1,33 @@
+.main-navigation {
+    padding-left: 0 !important;
+    @apply w-full flex-grow;
+
+    li.main-navigation--item {
+        @apply block w-full;
+
+        a.main-navigation--link {
+            @apply px-4 py-4 w-full inline-block text-left text-gray-200 no-underline;
+
+            i {
+                @apply text-gray-200;
+            }
+
+            &:hover {
+                @apply text-white bg-primary-600;
+
+                i {
+                    @apply text-white;
+                }
+            }
+        }
+
+        &.active {
+            a.main-navigation--link {
+                @apply bg-primary-600 text-accent-300;
+                i {
+                    @apply text-accent-300;
+                }
+            }
+        }
+    }
+}

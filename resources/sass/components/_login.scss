@@ -1,0 +1,9 @@
+#login-form {
+    input[type="email"], input[type="password"] {
+        @apply mt-1 px-3 py-2 block w-full shadow border border-gray-400 rounded-md text-gray-900;
+
+        &:focus {
+            @apply border-primary-500;
+        }
+    }
+}

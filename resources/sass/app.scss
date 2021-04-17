@@ -1,0 +1,46 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+$color-primary: #2a2f3d;
+$color-secondary: #00c3cc;
+$color-accent: #ff6732;
+$color-terciary: #ffd63e;
+
+@import "global/global";
+@import "global/base";
+
+@import "layouts/content";
+@import "layouts/header";
+@import "layouts/hero";
+@import "layouts/404";
+
+@import "components/notification";
+@import "components/addresses";
+@import "components/checkbox";
+@import "components/dropdown";
+@import "components/loaders";
+@import "components/button";
+@import "components/icons";
+@import "components/login";
+@import "components/modal";
+@import "components/card";
+@import "components/cart";
+@import "components/form";
+@import "components/item";
+@import "components/tabs";
+
+.error-alert {
+  bottom: 40px;
+  left: 50%;
+  z-index: 100000;
+  transform: translate(-50%, 250px);
+  transition: all 0.35s ease-in-out;
+
+  &.active {
+    transform: translate(-50%, 0);
+  }
+  @apply bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded fixed;
+}
